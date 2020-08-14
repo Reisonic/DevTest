@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="io.reisonic.devs.View.Fragments.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/loginfragment">
+        <action
+            android:id="@+id/action_loginFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="io.reisonic.devs.View.Fragments.MainScreenFragment"
+        android:label="MainScreenFragment"
+        tools:layout="@layout/mainscreenfragment">
+        <action
+            android:id="@+id/action_mainScreenFragment_to_detailedFragment"
+            app:destination="@id/detailedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedFragment"
+        android:name="io.reisonic.devs.View.Fragments.DetailedFragment"
+        android:label="DetailedFragment"
+        tools:layout="@layout/finishfragment">
+        <action
+            android:id="@+id/action_detailedFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+</navigation>
